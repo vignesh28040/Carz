@@ -1,0 +1,10 @@
+<div>
+  <mat-list>
+    <div *ngFor="let leftMenu of leftMenus">
+    <mat-list-item>
+      <a routerLink="{{leftMenu.url}}" on-click="synced()" routerLinkActive="active"> {{leftMenu.menuName}}</a>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    </div>
+  </mat-list>
+</div>

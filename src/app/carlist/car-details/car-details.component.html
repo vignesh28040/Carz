@@ -1,0 +1,163 @@
+<div class="row">
+  <figure class="figure col-md-8">
+    <img src="{{carDetails.ImageUrl}}" class="figure-img img-fluid" alt="...">
+    <figcaption class="figure-caption">A caption for the above image.</figcaption>
+  </figure>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header deep-orange lighten-1 white-text">
+        <h4>{{carDetails.Name | uppercase}}</h4>
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">{{carDetails.MinPrice | currencysymbol:'IND'}} - {{carDetails.MaxPrice | currencysymbol:'IND'}} </h4>
+        <p class="card-text">MILEAGE: 22 kmpl</p>
+        <button type="button" class="btn btn-deep-orange waves-light" (click)='openDialogBox()'>
+    View More Images
+</button>
+      </div>
+    </div>
+  </div>
+</div>
+<table class="table table-bordered table-hover">
+  <thead class="blue-grey lighten-4">
+    <tr>
+      <th>Engine &amp; Transmission</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Top Speed</td>
+      <td>155 Kmph</td>
+    </tr>
+    <tr>
+      <td>Acceleration (0-100 kmph)</td>
+      <td>14.8 Seconds</td>
+    </tr>
+    <tr>
+      <td>Engine Displacement(cc)
+        <div class="faqicon">
+          <div class="tooltip">The maximum amount of fuel that the engine can burn in one complete cycle of all the cylinders together.
+            <div class="tooltiparrow"></div>
+          </div>
+        </div>
+      </td>
+      <td>1248</td>
+    </tr>
+    <tr>
+      <td>Maximum Power
+        <div class="faqicon">
+          <div class="tooltip">The amount of work the engine can do over a period of time. It is measured in Horsepower.<br> One Horsepower is
+            equal to the energy needed to lift 550 pounds at a height of one foot for one second. 1 PS=1.01387 bhp
+            <div class="tooltiparrow"></div>
+          </div>
+        </div>
+      </td>
+      <td>74bhp@4000rpm</td>
+    </tr>
+    <tr>
+      <td>Maximum Torque
+        <div class="faqicon">
+          <div class="tooltip">The maximum power output the engine can produce over a particular range of speed.
+            <div class="tooltiparrow"></div>
+          </div>
+        </div>
+      </td>
+      <td>190Nm@2000rpm</td>
+    </tr>
+    <tr>
+      <td>Engine Description</td>
+      <td>1.3-litre 74bhp 16V DDiS Diesel Engine</td>
+    </tr>
+    <tr>
+      <td>Turning Radius
+        <div class="faqicon">
+          <div class="tooltip">The diameter of the circle created by the outer front wheel when the vehicle takes a full turn.<br> The lower the
+            Turning Radius the lesser the space the car requires to make a turn.
+            <div class="tooltiparrow"></div>
+          </div>
+        </div>
+      </td>
+      <td>4.8 meters</td>
+    </tr>
+    <tr>
+      <td>No. of Cylinders</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Drive Type
+        <div class="faqicon">
+          <div class="tooltip">This refers to the wheel(s) that are driven by the entire moving part of the car Engine, clutch, transmission,
+            driveshaft, differential, axles, etc.
+            <div class="tooltiparrow"></div>
+          </div>
+        </div>
+      </td>
+      <td>FWD</td>
+    </tr>
+    <tr>
+      <td>Turbo Charger
+        <div class="faqicon">
+          <div class="tooltip">A compressor used in engine to increase its power output by increasing the mass of air and fuel entering the engine.
+            <br> They offer a considerable increase in engine power with only a slight increase in weight. Turbochargers
+            work better on Diesel engines.
+            <div class="tooltiparrow"></div>
+          </div>
+        </div>
+      </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Super Charger
+        <div class="faqicon">
+          <div class="tooltip">A compressor used to pump fuel-air mixture under pressure into the engine to improve its efficiency and thus increase
+            its output power.
+            <div class="tooltiparrow"></div>
+          </div>
+        </div>
+      </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Valves Per Cylinder</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Compression Ratio
+        <div class="faqicon">
+          <div class="tooltip">Ratio of the volume of cylinder when the piston is at the bottom of its rotation (X), to the volume of the cylinder
+            when it is at the top of its rotation (Y). <br> Mathematically it is expressed as X/Y: 1. It is used to measure
+            performance of the engine.
+            <div class="tooltiparrow"></div>
+          </div>
+        </div>
+      </td>
+      <td>17.6:1</td>
+    </tr>
+    <tr>
+      <td>Fuel Supply System
+        <div class="faqicon">
+          <div class="tooltip">The system that delivers fuel to the engine as per its needs.
+            <div class="tooltiparrow"></div>
+          </div>
+        </div>
+      </td>
+      <td>CRDI</td>
+    </tr>
+    <tr>
+      <td>Gear box</td>
+      <td>5 Speed </td>
+    </tr>
+    <tr>
+      <td>Steering Gear Type
+        <div class="faqicon">
+          <div class="tooltip">The mechanism by which the rotary motion of the steering wheel is converted to <br> straight line motion required
+            to move a car.
+            <div class="tooltiparrow"></div>
+          </div>
+        </div>
+      </td>
+      <td>Rack &amp; Pinion</td>
+    </tr>
+  </tbody>
+</table>

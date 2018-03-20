@@ -1,0 +1,15 @@
+<div class="nav-bar">
+  <mat-toolbar color="primary">
+    <span>CARZ</span>
+    <div class="top-menus">
+      <span *ngFor="let menu of topMenu">
+        <a mat-button routerLink="{{menu.url}}" routerLinkActive="active" *ngIf="menu.active else dummy">{{menu.menuName}}</a>
+        <ng-template #dummy><a mat-button>{{menu.menuName}}</a></ng-template>
+      </span>
+    </div>
+  </mat-toolbar>
+  <mat-menu x-position="before" #menu="matMenu">
+    <button mat-menu-item>Option 1</button>
+    <button mat-menu-item>Option 2</button>
+  </mat-menu>
+</div>

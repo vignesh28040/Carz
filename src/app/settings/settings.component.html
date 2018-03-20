@@ -1,0 +1,58 @@
+<h1>Settings</h1>
+<div class="row">
+    <div class="col-md-6 col-lg-6 col-xs-6">
+        <form (ngSubmit)="SaveSetting()" #SettingForm="ngForm" class="example-container">
+            <mat-form-field>
+                <input matInput placeholder="Input" name="name" ngModel autocomplete="off" required/>
+            </mat-form-field>
+
+            <mat-form-field>
+                <textarea matInput placeholder="Textarea" name="description" ngModel autocomplete="off" required></textarea>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-select placeholder="Select" ngModel name="status" required>
+                    <mat-option *ngFor="let option of options" [value]="option">
+                        {{option | uppercase}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div class="float-right">
+                <div class="button-row">
+                    <button mat-raised-button color="primary" type="submit" [disabled]="!SettingForm.valid">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-6 col-lg-6 col-xs-6">
+        <mat-table #table [dataSource]="settings" class="border-table">
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="id">
+                <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="status">
+                <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.status}} </mat-cell>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="description">
+                <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+    </div>
+</div>

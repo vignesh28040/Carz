@@ -1,0 +1,13 @@
+
+  <div class="row">
+    <div class="col-md-3">
+       <div class="list-group" *ngFor="let car of carlist">
+         <a routerLink="/carlist/{{car.Id}}" routerLinkActive="active" class="list-group-item">{{car.Name}}</a> 
+      </div> 
+    </div>
+    <div class="col-md-9">
+      <section class="section">
+          <router-outlet></router-outlet>
+      </section>
+    </div>
+  </div>
